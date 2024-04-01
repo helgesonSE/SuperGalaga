@@ -20,7 +20,7 @@ public class ShipMovment : MonoBehaviour
     {
         if (collision.gameObject.tag == "Boundary")
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+            transform.position = new Vector3(transform.position.x-1, transform.position.y, transform.position.z);
             moveSpeed *= -1;
         }
     }
