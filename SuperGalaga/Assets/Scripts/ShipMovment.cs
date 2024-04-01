@@ -23,5 +23,11 @@ public class ShipMovment : MonoBehaviour
             transform.position = new Vector3(transform.position.x-1, transform.position.y, transform.position.z);
             moveSpeed *= -1;
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+           Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
