@@ -13,7 +13,11 @@ public class ProjectileShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
         audioSource = GetComponent<AudioSource>();
+=======
+
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame

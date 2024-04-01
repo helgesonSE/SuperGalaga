@@ -278,7 +278,11 @@ Transform:
   m_GameObject: {fileID: 411003191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -6.77, y: 5.87, z: 0.024050573}
+=======
+  m_LocalPosition: {x: -2.98, y: 5.64, z: 0.024050573}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,7 +452,11 @@ Transform:
   m_GameObject: {fileID: 669363943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 7.85, y: 1.31, z: 0.024050573}
+=======
+  m_LocalPosition: {x: 11.86, y: 1.36, z: 0.024050573}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -552,7 +560,11 @@ Transform:
   m_GameObject: {fileID: 732431254}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -15.73, y: 1.36, z: 0.024050573}
+=======
+  m_LocalPosition: {x: -12.01, y: 1.36, z: 0.024050573}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,7 +662,11 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271003718}
+<<<<<<< Updated upstream
   m_Enabled: 0
+=======
+  m_Enabled: 1
+>>>>>>> Stashed changes
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -672,10 +688,17 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< Updated upstream
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.08130136}
+=======
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.010537207, y: -0.1219482}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -686,7 +709,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 1, y: 0.6770964}
+=======
+  m_Size: {x: 0.93677723, y: 0.67180526}
+>>>>>>> Stashed changes
   m_EdgeRadius: 0
 --- !u!1 &1373254076
 GameObject:
@@ -871,9 +898,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1373254076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a70b9b1f9425bd640825ee6afd555323, type: 3}
+  m_Script: {fileID: 11500000, guid: af6e90c1b3bf79a4c9d920fafad0e483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   projectilePrefab: {fileID: 4205954070030843729, guid: 0d10772d2012c604e9941dee7c9a6ef0, type: 3}
 --- !u!1 &1483602195
 GameObject:
@@ -1003,6 +1031,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  projectilePrefab: {fileID: 3581495752163526096, guid: 68c2155a85796c348b22b42383e85d2d, type: 3}
+>>>>>>> Stashed changes
 --- !u!1 &1559751953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1126,11 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559751953}
+<<<<<<< Updated upstream
   m_Enabled: 0
+=======
+  m_Enabled: 1
+>>>>>>> Stashed changes
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1117,10 +1152,17 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< Updated upstream
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.027333215}
+=======
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005268514, y: -0.005267933}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1131,7 +1173,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 1, y: 0.6729895}
+=======
+  m_Size: {x: 0.9473145, y: 0.77872074}
+>>>>>>> Stashed changes
   m_EdgeRadius: 0
 --- !u!1 &1918756911
 GameObject:
@@ -1204,7 +1250,11 @@ Transform:
   m_GameObject: {fileID: 1918756911}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -6.79, y: -4.4, z: 0.024050573}
+=======
+  m_LocalPosition: {x: -2.98, y: -4.41, z: 0.024050573}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1219,9 +1269,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043292640}
-  - component: {fileID: 2043292639}
-  - component: {fileID: 2043292642}
-  - component: {fileID: 2043292641}
+  - component: {fileID: 2043292643}
+  - component: {fileID: 2043292644}
+  - component: {fileID: 2043292645}
   m_Layer: 0
   m_Name: Ships
   m_TagString: Enemy
@@ -1229,6 +1279,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &2043292639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+=======
+>>>>>>> Stashed changes
 --- !u!4 &2043292640
 Transform:
   m_ObjectHideFlags: 0
@@ -1250,43 +1303,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043292638}
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.02175439, y: 0.02137547, z: 0.7110963, w: -0.70243275}
   m_LocalPosition: {x: 3.99, y: 0.05, z: -0.09}
   m_LocalScale: {x: 0.9119246, y: 1.0168267, z: 1.0170611}
+=======
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 8.28, y: 0.48, z: 0.017792912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1271003719}
   - {fileID: 1559751954}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_LocalEulerAnglesHint: {x: -3.495, y: 0.052, z: 269.296}
 --- !u!50 &2043292641
 Rigidbody2D:
   serializedVersion: 4
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &2043292643
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043292638}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &2043292642
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee88e6337e757342a65a937822cbb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+--- !u!61 &2043292644
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1318,7 +1370,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< Updated upstream
   m_Offset: {x: 0.54275584, y: 2.3297663}
+=======
+  m_Offset: {x: 0.5377388, y: 2.3371906}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1329,8 +1385,39 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 3.9111457, y: 0.37999845}
+=======
+  m_Size: {x: 4.090618, y: 0.3781824}
+>>>>>>> Stashed changes
   m_EdgeRadius: 0
+--- !u!50 &2043292645
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043292638}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
