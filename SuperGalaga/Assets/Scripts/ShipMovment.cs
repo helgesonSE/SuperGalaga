@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ShipMovment : MonoBehaviour
 {
     public float moveSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +26,6 @@ public class ShipMovment : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x-1, transform.position.y, transform.position.z);
             moveSpeed *= -1;
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-           Destroy(collision.gameObject);
-            Destroy(gameObject);
         }
     }
 }
