@@ -12,7 +12,8 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float countdown; // Time between waves
 
     [SerializeField] private GameObject spawnPoint; // The point where the enemies will spawn
-  
+
+    public GameObject[] waveObjects;
 
     public Wave[] waves;
 
