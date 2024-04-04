@@ -11,15 +11,12 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private float countdown; // Time between waves
 
-    [SerializeField] private GameObject spawnPoint; // The point where the enemies will spawn
-
-    public GameObject[] waveObjects;
-
-    public Wave[] waves;
+    public WaveTemp[] waves;
 
     public int waveIndex = 0;
 
-    private bool readyToCountDown; 
+    private bool readyToCountDown;
+
     private void Start()
     {
         readyToCountDown = true;
@@ -37,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
             countdown -= Time.deltaTime;
         }
 
-        if (countdown <= 0 && readyToCountDown) // If the countdown reaches 0, spawn the wave
+        if (waveIndex < waves.Length && countdown <= 0 && readyToCountDown) // If the countdown reaches 0, spawn the wave
         {
             readyToCountDown = false;
 
@@ -46,7 +43,7 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
         }
 
-        if (waves[waveIndex].enemiesLeft == 0) // If all enemies in the wave are destroyed, move to the next wave
+        if (waveIndex < waves.Length && waves[waveIndex].enemiesLeft == 0) // If all enemies in the wave are destroyed, move to the next wave
         {
             readyToCountDown = true;
 
@@ -54,14 +51,20 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    public IEnumerator SpawnWave()
+   public IEnumerator SpawnWave()
+{
+    if (waveIndex < waves.Length)
     {
-        if (waveIndex < waves.Length)
-        {
+            // Get the default values
+            MotionType defaultMotionType = waves[waveIndex].motionTypes.Length > 0 ? waves[waveIndex].motionTypes[0] : MotionType.Straight;
+            float defaultSpeed = waves[waveIndex].speeds.Length > 0 ? waves[waveIndex].speeds[0] : 0;
+            float defaultMovementSpeed = waves[waveIndex].movementSpeed.Length > 0 ? waves[waveIndex].movementSpeed[0] : 0;
+            float defaultMovementRadius = waves[waveIndex].movementRadius.Length > 0 ? waves[waveIndex].movementRadius[0] : 0;
+
             for (int i = 0; i < waves[waveIndex].enemies.Length; i++)
-            {
-                // Calculate the spawn position with an offset
-                Vector3 spawnPosition = spawnPoint.transform.position + new Vector3(0, i * 1.0f, 0); // Change the multiplier to adjust the offset
+        {
+
+                Vector3 spawnPosition = waves[waveIndex].spawnPoint.transform.position + new Vector3(0, i * 1.0f, 0); // Change the multiplier to adjust the offset
 
                 Enemy enemy = Instantiate(waves[waveIndex].enemies[i], spawnPosition, Quaternion.identity); // Spawn the enemy
 
@@ -71,13 +74,18 @@ public class WaveSpawner : MonoBehaviour
 
                 rb.gravityScale = 0; // Set the gravity scale to 0
 
-                enemy.motionType = waves[waveIndex].motionTypes[i]; // Set the motion type of the enemy
+                // Set the motion type of the enemy
+                enemy.motionType = waves[waveIndex].motionTypes.Length > i ? waves[waveIndex].motionTypes[i] : defaultMotionType;
 
-                enemy.speed = waves[waveIndex].speeds[i]; // Set the speed of the enemy
+                // Set the speed of the enemy
+                enemy.speed = waves[waveIndex].speeds.Length > i ? waves[waveIndex].speeds[i] : defaultSpeed;
 
-                enemy.swirlSpeed = waves[waveIndex].swirlSpeeds[i]; // Set the swirl speed of the enemy
+                // Set the movement speed of the enemy
+                enemy.movementSpeed = waves[waveIndex].movementSpeed.Length > i ? waves[waveIndex].movementSpeed[i] : defaultMovementSpeed;
 
-                enemy.swirlRadius = waves[waveIndex].swirlRadii[i]; // Set the swirl radius of the enemy
+                // Set the movement radius of the enemy
+                enemy.movementRadius = waves[waveIndex].movementRadius.Length > i ? waves[waveIndex].movementRadius[i] : defaultMovementRadius;
+
 
                 yield return new WaitForSeconds(waves[waveIndex].timeToNextEnemy);
             }
@@ -93,9 +101,9 @@ public class Wave // Class to store wave data
 
     public float[] speeds;
 
-    public float[] swirlSpeeds;
+    public float[] movementSpeed;
 
-    public float[] swirlRadii;
+    public float[] movementRadius;
 
     public float timeToNextEnemy;
 

@@ -11,13 +11,15 @@ public class WaveTemp : MonoBehaviour
     [SerializeField]
     public float[] speeds;
     [SerializeField]
-    public float[] swirlSpeeds;
+    public float[] movementSpeed;
     [SerializeField]
-    public float[] swirlRadii;
+    public float[] movementRadius;
     [SerializeField]
     public float timeToNextEnemy;
     [SerializeField]
     public float timeToNextWave;
+    [SerializeField] 
+    public GameObject spawnPoint;
 
     [HideInInspector] public int enemiesLeft;
 

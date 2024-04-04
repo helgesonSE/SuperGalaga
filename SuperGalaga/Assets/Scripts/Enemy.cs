@@ -4,11 +4,13 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
 
+    private float initialY;
+
     private WaveSpawner waveSpawner;
 
-    public float swirlSpeed;
+    public float movementSpeed;
 
-    public float swirlRadius;
+    public float movementRadius;
 
     public MotionType motionType;
 
@@ -18,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         waveSpawner = GetComponentInParent<WaveSpawner>();
         transform.Rotate(0, 0, 90);// Rotate the enemy to face the player
+        initialY = transform.position.y;
     }
 
     void Update()
@@ -26,30 +29,33 @@ public class Enemy : MonoBehaviour
         {
             case MotionType.Straight:
 
-                transform.Translate(Vector2.up * speed * Time.deltaTime); 
+                float newY = initialY + speed * Time.deltaTime;
+
+                float newX = transform.position.x - speed * Time.deltaTime;
+
+                transform.position = new Vector3(newX, newY, transform.position.z);
 
                 break;
 
             case MotionType.Swirl:
+
                 time += Time.deltaTime;
 
-                float x = transform.position.x - speed * Time.deltaTime;
+                float x = Mathf.Cos(time * movementSpeed) * movementRadius;
 
-                float y = Mathf.Sin(time * swirlSpeed) * swirlRadius; // Adjust the multiplier for different swirl patterns (Adjustable in the editor)
+                float y = Mathf.Sin(time * movementSpeed) * movementRadius;
 
-                float z = transform.position.z;
-
-                transform.position = new Vector3(x, y, z);
+                transform.Translate(new Vector3(x, y, 0) * Time.deltaTime);
 
                 break;
 
-            case MotionType.ZigZag:
+            case MotionType.ZigZag: 
 
                 time += Time.deltaTime;
 
                 float xZigZag = transform.position.x - speed * Time.deltaTime;
 
-                float yZigZag = Mathf.Sin(time * swirlSpeed) * swirlRadius; // Adjust the multiplier for different zigzag patterns (Adjustable in the editor)
+                float yZigZag = initialY + Mathf.Sin(time * movementSpeed) * movementRadius;
 
                 float zZigZag = transform.position.z;
 
@@ -59,13 +65,13 @@ public class Enemy : MonoBehaviour
         }
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.gameObject.tag == "Boundary")
     {
-        if (collision.gameObject.tag == "Boundary")
-        {
-            Destroy(gameObject);
+        Destroy(gameObject);
 
-            waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
-        }
+        waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
     }
+}
 }
