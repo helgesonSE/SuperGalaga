@@ -3,7 +3,10 @@ guid: ba02eac07a658e14085316949cd70f8b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explosionPrefab: {instanceID: 0}
+  - hitSoundClip: {fileID: 8300000, guid: dd779a55a72263f41b8dee9ec429fe83, type: 3}
+  - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,11 +11,14 @@ public class Projectile : MonoBehaviour
     private PointManager pointManager;
     private WaveSpawner waveSpawner;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
         waveSpawner = GameObject.FindObjectOfType<WaveSpawner>();
+
     }
 
     // Update is called once per frame
@@ -40,4 +44,5 @@ public class Projectile : MonoBehaviour
         }
 
     }
+
 }
