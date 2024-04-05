@@ -10,6 +10,7 @@ public class ProjectileShoot : MonoBehaviour
     private AudioSource audioSource;
 
     public GameObject projectilePrefab;
+    private bool triggerIsDown = false;
     private bool readyToShoot = true;
     private float bulletDelay = 0.5f; //Insert your desired delay...
     // Start is called before the first frame update
@@ -21,13 +22,18 @@ public class ProjectileShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && readyToShoot)
+        if ((Input.GetButtonDown("Fire1") || triggerIsDown) && readyToShoot)
         {
             laserBullet();
+            triggerIsDown = true;
         }
 
+        if (Input.GetButtonUp("Fire1"))
+            triggerIsDown = false;
+
+
     }
-    void laserBullet ()
+    void laserBullet()
     {
 
         audioSource.PlayOneShot(shootSoundClip); // Play sound
@@ -39,7 +45,7 @@ public class ProjectileShoot : MonoBehaviour
 
     IEnumerator WaitBetweenShots()
     {
-        yield return new WaitForSeconds(bulletDelay); 
+        yield return new WaitForSeconds(bulletDelay);
 
         readyToShoot = true;
     }

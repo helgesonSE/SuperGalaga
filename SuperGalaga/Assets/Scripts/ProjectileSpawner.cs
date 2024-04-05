@@ -25,6 +25,6 @@ public class ProjectileSpawner : MonoBehaviour
     void Shoot()
     {
         // Skapa ett skott vid spawnerns position
-        Instantiate(Projectile12, transform.position, Quaternion.identity);
+        Instantiate(Projectile12, transform.position, Quaternion.Euler(0f,0f,90f));
     }
 }
