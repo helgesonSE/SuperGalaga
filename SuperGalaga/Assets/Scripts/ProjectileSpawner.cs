@@ -15,6 +15,7 @@ public class ProjectileSpawner : MonoBehaviour
         // Kontrollera om det är dags att skjuta igen
         if (Time.time >= nextFireTime)
         {
+            //fixa det
             // Skjut och uppdatera nästa gång att skjuta
             Shoot();
             nextFireTime = Time.time + fireRate;
