@@ -20,10 +20,7 @@ public class WaveTemp : MonoBehaviour
     public float timeToNextWave;
     [SerializeField] 
     public GameObject spawnPoint;
-    [SerializeField]
-    public float enemyVerticalSpacing = 1.0f;
-    [SerializeField]
-    public float enemyHorizontalSpacing = 1.0f;
+
     [HideInInspector] public int enemiesLeft;
 
 }

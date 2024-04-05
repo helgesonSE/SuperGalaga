@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
 
                 break;
 
-            case MotionType.ZigZag:
+            case MotionType.ZigZag: 
 
                 time += Time.deltaTime;
 
@@ -63,14 +63,15 @@ public class Enemy : MonoBehaviour
 
                 break;
         }
-
+        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.gameObject.tag == "Boundary")
     {
-        if (collision.gameObject.tag == "Boundary" && collision.gameObject.name == "Boundary")
-        {
-            Destroy(gameObject);
-            waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
-        }
+        Destroy(gameObject);
+
+        waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
     }
+}
 }
