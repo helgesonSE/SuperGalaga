@@ -11,7 +11,7 @@ public class ProjectileShoot : MonoBehaviour
 
     public GameObject projectilePrefab;
     private bool readyToShoot = true;
-    private float bulletDelay = 0.5f; //Insert your desired delay...
+    private float bulletDelay = 0.2f; //Insert your desired delay...
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,9 @@ public class ProjectileShoot : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && readyToShoot)
         {
             laserBullet();
+
         }
+
 
     }
     void laserBullet ()
