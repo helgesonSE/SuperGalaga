@@ -51,10 +51,10 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-   public IEnumerator SpawnWave()
-{
-    if (waveIndex < waves.Length)
+    public IEnumerator SpawnWave()
     {
+        if (waveIndex < waves.Length)
+        {
             // Get the default values
             MotionType defaultMotionType = waves[waveIndex].motionTypes.Length > 0 ? waves[waveIndex].motionTypes[0] : MotionType.Straight;
             float defaultSpeed = waves[waveIndex].speeds.Length > 0 ? waves[waveIndex].speeds[0] : 0;
@@ -62,9 +62,9 @@ public class WaveSpawner : MonoBehaviour
             float defaultMovementRadius = waves[waveIndex].movementRadius.Length > 0 ? waves[waveIndex].movementRadius[0] : 0;
 
             for (int i = 0; i < waves[waveIndex].enemies.Length; i++)
-        {
+            {
 
-                Vector3 spawnPosition = waves[waveIndex].spawnPoint.transform.position + new Vector3(0, i * 1.0f, 0); // Change the multiplier to adjust the offset
+                Vector3 spawnPosition = waves[waveIndex].spawnPoint.transform.position + new Vector3(i * waves[waveIndex].enemyHorizontalSpacing, i * waves[waveIndex].enemyVerticalSpacing, 0); // Calculate the spawn position with spacing
 
                 Enemy enemy = Instantiate(waves[waveIndex].enemies[i], spawnPosition, Quaternion.identity); // Spawn the enemy
 
@@ -111,6 +111,3 @@ public class Wave // Class to store wave data
 
     [HideInInspector] public int enemiesLeft;
 }
-
-
-
