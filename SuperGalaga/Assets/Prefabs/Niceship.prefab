@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4134297282608752772}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000071804976, y: 0.00027050733, z: 0.99999017, w: 0.004428593}
-  m_LocalPosition: {x: 2.1201832, y: 2.3302693, z: -0.017800022}
+  m_LocalPosition: {x: 2.1201832, y: 2.3302693, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  swirlSpeed: 0
-  swirlRadius: 0
+  movementSpeed: 0
+  movementRadius: 0
   motionType: 0
