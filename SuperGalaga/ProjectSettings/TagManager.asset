@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Boundary (1)
   - WaveSpawner
+  - Score
   layers:
   - Default
   - TransparentFX
