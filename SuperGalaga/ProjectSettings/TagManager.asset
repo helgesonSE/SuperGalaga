@@ -10,6 +10,7 @@ TagManager:
   - Boundary (1)
   - WaveSpawner
   - BackgroundElement
+  - Score
   layers:
   - Default
   - TransparentFX
