@@ -15,6 +15,7 @@ public class ProjectileSpawner : MonoBehaviour
         // Kontrollera om det är dags att skjuta igen
         if (Time.time >= nextFireTime)
         {
+            //fixa det
             // Skjut och uppdatera nästa gång att skjuta
             Shoot();
             nextFireTime = Time.time + fireRate;
@@ -24,6 +25,6 @@ public class ProjectileSpawner : MonoBehaviour
     void Shoot()
     {
         // Skapa ett skott vid spawnerns position
-        Instantiate(Projectile12, transform.position, Quaternion.identity);
+        Instantiate(Projectile12, transform.position, Quaternion.Euler(0f,0f,90f));
     }
 }

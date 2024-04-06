@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Boundary (1)
   - WaveSpawner
+  - BackgroundElement
   - Score
   layers:
   - Default
