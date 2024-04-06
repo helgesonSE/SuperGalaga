@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6010176930669635813}
   - component: {fileID: 5940487695403531322}
   - component: {fileID: -2094539625167586773}
-  - component: {fileID: 1817402544750443869}
   m_Layer: 0
   m_Name: Niceship2
   m_TagString: Enemy
@@ -148,17 +147,6 @@ MonoBehaviour:
   movementSpeed: 0
   movementRadius: 0
   motionType: 0
---- !u!114 &1817402544750443869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366770975927241488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88e8e8f28a71be4996b9b187be95ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Projectile12: {fileID: 1804451458869432575, guid: 407ce290065e419448534a1b73c660dc, type: 3}
-  fireRate: 4
+  projectilePrefab: {fileID: 1804451458869432575, guid: 407ce290065e419448534a1b73c660dc, type: 3}
+  fireRate: 6
+  canShoot: 1

@@ -2,17 +2,25 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed;
+    [HideInInspector] public float speed;
 
-    private float initialY;
+    [HideInInspector] private float initialY;
 
     private WaveSpawner waveSpawner;
 
-    public float movementSpeed;
+    [HideInInspector] public float movementSpeed;
 
-    public float movementRadius;
+    [HideInInspector] public float movementRadius;
 
-    public MotionType motionType;
+    [HideInInspector] public MotionType motionType;
+
+    public GameObject projectilePrefab; // The projectile that this enemy shoots
+
+    public float fireRate = 1f; // Time in seconds between shots
+
+    private float nextFireTime = 0f;
+
+    public bool canShoot = false; // Whether or not this enemy can shoot
 
     private float time; // Used for delay so that the enemy doesn't start moving immediately
 
@@ -25,6 +33,19 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        void Shoot()
+        {
+            // Create a shot at the enemy's position
+            Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0f, 0f, 90f));
+        }
+        // Check if it's time to shoot again, and if this enemy can shoot
+        if (canShoot && Time.time >= nextFireTime)
+        {
+            // Shoot and update the next time to shoot
+            Shoot();
+            nextFireTime = Time.time + fireRate;
+        }
+
         switch (motionType)// Switch between different motion types
         {
             case MotionType.Straight:
@@ -67,7 +88,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Boundary" && collision.gameObject.name == "Boundary")
+        if (collision.gameObject.tag == "Boundary" && collision.gameObject.name == "Boundary (1)")
         {
             Destroy(gameObject);
             waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
