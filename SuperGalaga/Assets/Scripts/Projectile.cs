@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     private PointManager pointManager;
     private WaveSpawner waveSpawner;
 
-    //its fixad
+
     // Start is called before the first frame update
     void Start()
     {

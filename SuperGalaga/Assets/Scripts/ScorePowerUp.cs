@@ -15,7 +15,8 @@ public class ScorePowerUp : PowerUp
         PointManager pointManager = other.GetComponent<PointManager>();
         if (pointManager != null)
         {
-            pointManager.IncreasePoints(amount);
+            pointManager.PowerUp15sec(amount);
+
         }
         else
         {

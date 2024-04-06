@@ -8,6 +8,8 @@ public class PointManager : MonoBehaviour
     public FloatVariable points;
     public float score;
 
+    public float PowerUpTime = 15f;
+
     public TMP_Text scoreText;
 
     public float Points => points.value;
@@ -24,9 +26,16 @@ public class PointManager : MonoBehaviour
         score += points.value;
         scoreText.text = "Score: " + score;
     }
-    public void IncreasePoints(float amount)
+    public void PowerUp15sec(float amount)
+    {
+        StartCoroutine(IncreasePoints(amount));
+
+    }
+
+    IEnumerator IncreasePoints(float amount)
     {
         points.value += amount;
-        // UpdateScore();
+        yield return new WaitForSeconds(PowerUpTime);
+        points.value -= amount;
     }
 }
