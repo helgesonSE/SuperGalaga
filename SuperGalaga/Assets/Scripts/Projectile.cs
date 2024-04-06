@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
             waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
-            pointManager.UpdateScore(50);
+            pointManager.UpdateScore();
             Destroy(gameObject);
         }
 

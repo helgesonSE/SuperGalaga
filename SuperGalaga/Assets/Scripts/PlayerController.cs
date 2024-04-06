@@ -5,14 +5,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    public float moveSpeed = 5f;
     public float hInput;
+    // [SerializeField] 
+    // public float points = 50f;
 
-
+    // public float points
+    // {
+    //     get { return _points; }
+    //     set { _points = value; }
+    // }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
