@@ -68,9 +68,9 @@ public class WaveSpawner : MonoBehaviour
 
                 for (int i = 0; i < subWave.enemies.Length; i++)
                 {
-                    Vector3 spawnPosition = subWave.spawnPoint.transform.position + new Vector3(i * subWave.enemyHorizontalSpacing, i * subWave.enemyVerticalSpacing, 0); // Calculate the spawn position with spacing
+                    Vector3 spawnPosition = subWave.spawnPoint.transform.position + new Vector3(i * subWave.enemyHorizontalSpacing, i * subWave.enemyVerticalSpacing, -4); // Calculate the spawn position with spacing
 
-                Vector3 spawnPosition = waves[waveIndex].spawnPoint.transform.position + new Vector3(0, i * 1.0f, -4); // Change the multiplier to adjust the offset
+                    Enemy enemy = Instantiate(subWave.enemies[i], spawnPosition, Quaternion.identity); // Spawn the enemy
 
                     enemy.transform.parent = transform; // Set the parent of the enemy to the WaveSpawner
 
