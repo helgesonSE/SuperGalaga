@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3004986455605776846}
   - component: {fileID: 4459188942180667614}
-  - component: {fileID: 2475256825767273747}
   - component: {fileID: 6859998541740095179}
+  - component: {fileID: 7214704163837338893}
   m_Layer: 0
   m_Name: ImgPwrUpS50
   m_TagString: ScorePowerUp
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8353585375785945703}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.12, y: 2.31, z: 0}
+  m_LocalPosition: {x: -2.08, y: 2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2475256825767273747
+--- !u!114 &6859998541740095179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353585375785945703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ecb127e0fde5054a88715fa6b1c6184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerup: {fileID: 11400000, guid: d00953b8efadbda4a8f0593ade73b56e, type: 2}
+  speed: 1
+--- !u!58 &7214704163837338893
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,17 +134,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.36
---- !u!114 &6859998541740095179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353585375785945703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ecb127e0fde5054a88715fa6b1c6184, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerup: {fileID: 11400000, guid: d00953b8efadbda4a8f0593ade73b56e, type: 2}
+  m_Radius: 0.33
