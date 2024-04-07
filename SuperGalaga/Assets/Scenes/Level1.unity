@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -383,63 +385,6 @@ MonoBehaviour:
     timeToNextEnemy: 0
   timeToNextWave: 3
   enemiesLeft: 0
---- !u!1001 &380167668
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7083045
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.70590705
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004986455605776846, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 89.806
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353585375785945703, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
-      propertyPath: m_Name
-      value: ImgPwrUpS50
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
 --- !u!1 &411003191
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -1065,6 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves: []
   timeToNextWave: 0
   enemiesLeft: 0
@@ -1158,6 +1107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -1293,6 +1244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -1384,6 +1337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -1951,6 +1906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -2928,6 +2885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves: []
   timeToNextWave: 3
   enemiesLeft: 0
@@ -3080,7 +3039,6 @@ SceneRoots:
   - {fileID: 1483602197}
   - {fileID: 1728052091}
   - {fileID: 553204587}
-  - {fileID: 380167668}
   - {fileID: 1493914172}
   - {fileID: 2000247573}
   - {fileID: 880338265}
