@@ -11,6 +11,8 @@ TagManager:
   - WaveSpawner
   - BackgroundElement
   - Score
+  - ScorePowerUp
+  - PowerUpLives
   layers:
   - Default
   - TransparentFX
