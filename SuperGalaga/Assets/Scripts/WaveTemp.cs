@@ -21,6 +21,8 @@ public class SubWave
 
 public class WaveTemp : MonoBehaviour
 {
+    public PowerUp[] powerUps;
+    public GameObject[] powerUpSpawnPoints;
     [SerializeField]
     public SubWave[] subWaves;
     [SerializeField]
