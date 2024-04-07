@@ -18,6 +18,7 @@ public class PointManager : MonoBehaviour
     void Start()
     {
         scoreText.text = "Score: " + score;
+        points.value = 50f;
     }
 
     public void UpdateScore()
@@ -38,4 +39,5 @@ public class PointManager : MonoBehaviour
         yield return new WaitForSeconds(PowerUpTime);
         points.value -= amount;
     }
+
 }
