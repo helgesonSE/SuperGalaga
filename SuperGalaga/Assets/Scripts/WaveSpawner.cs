@@ -54,35 +54,38 @@ public class WaveSpawner : MonoBehaviour
             waveIndex++;
         }
     }
-    private void SpawnPowerUps(WaveTemp wave)
-    {
-        for (int i = 0; i < wave.powerUps.Length; i++)
-        {
-            var powerUp = wave.powerUps[i];
-            GameObject spawnPoint = i < wave.powerUpSpawnPoints.Length ? wave.powerUpSpawnPoints[i] : null;
-            Vector3 spawnPosition = spawnPoint.transform.position;
-            Instantiate(powerUp.prefab, spawnPosition, Quaternion.identity);
-        }
-    }
-
     public IEnumerator SpawnWave()
     {
         if (waveIndex < waves.Length)
         {
-            SpawnPowerUps(waves[waveIndex]);
+            WaveTemp wave = waves[waveIndex];
 
-            foreach (var subWave in waves[waveIndex].subWaves)
+            for (int i = 0; i < wave.subWaves.Length; i++)
             {
+                
+                if (i < wave.powerUps.Length && i < wave.powerUpSpawnPoints.Length)
+                {
+                    var powerUp = wave.powerUps[i];
+                    GameObject spawnPoint = wave.powerUpSpawnPoints[i];
+
+                    if (spawnPoint != null && powerUp != null && powerUp.prefab != null)
+                    {
+                        Vector3 spawnPosition = spawnPoint.transform.position;
+                        Instantiate(powerUp.prefab, spawnPosition, Quaternion.identity);
+                    }
+                }
+
+                var subWave = wave.subWaves[i];
                 MotionType defaultMotionType = subWave.motionTypes.Length > 0 ? subWave.motionTypes[0] : MotionType.Straight;
                 float defaultSpeed = subWave.speeds.Length > 0 ? subWave.speeds[0] : 0;
                 float defaultMovementSpeed = subWave.movementSpeed.Length > 0 ? subWave.movementSpeed[0] : 0;
                 float defaultMovementRadius = subWave.movementRadius.Length > 0 ? subWave.movementRadius[0] : 0;
 
-                for (int i = 0; i < subWave.enemies.Length; i++)
+                for (int j = 0; j < subWave.enemies.Length; j++)
                 {
-                    Vector3 spawnPosition = subWave.spawnPoint.transform.position + new Vector3(i * subWave.enemyHorizontalSpacing, i * subWave.enemyVerticalSpacing, -4); // Calculate the spawn position with spacing
+                    Vector3 spawnPosition = subWave.spawnPoint.transform.position + new Vector3(j * subWave.enemyHorizontalSpacing, j * subWave.enemyVerticalSpacing, -4); // Calculate the spawn position with spacing
 
-                    Enemy enemy = Instantiate(subWave.enemies[i], spawnPosition, Quaternion.identity); // Spawn the enemy
+                    Enemy enemy = Instantiate(subWave.enemies[j], spawnPosition, Quaternion.identity); // Spawn the enemy
 
                     enemy.transform.parent = transform; // Set the parent of the enemy to the WaveSpawner
 
@@ -91,21 +94,23 @@ public class WaveSpawner : MonoBehaviour
                     rb.gravityScale = 0; // Set the gravity scale to 0
 
                     // Set the motion type of the enemy
-                    enemy.motionType = subWave.motionTypes.Length > i ? subWave.motionTypes[i] : defaultMotionType;
+                    enemy.motionType = subWave.motionTypes.Length > j ? subWave.motionTypes[j] : defaultMotionType;
 
                     // Set the speed of the enemy
-                    enemy.speed = subWave.speeds.Length > i ? subWave.speeds[i] : defaultSpeed;
+                    enemy.speed = subWave.speeds.Length > j ? subWave.speeds[j] : defaultSpeed;
 
                     // Set the movement speed of the enemy
-                    enemy.movementSpeed = subWave.movementSpeed.Length > i ? subWave.movementSpeed[i] : defaultMovementSpeed;
+                    enemy.movementSpeed = subWave.movementSpeed.Length > j ? subWave.movementSpeed[j] : defaultMovementSpeed;
 
                     // Set the movement radius of the enemy
-                    enemy.movementRadius = subWave.movementRadius.Length > i ? subWave.movementRadius[i] : defaultMovementRadius;
+                    enemy.movementRadius = subWave.movementRadius.Length > j ? subWave.movementRadius[j] : defaultMovementRadius;
 
                     yield return new WaitForSeconds(subWave.timeToNextEnemy);
                 }
+
                 yield return new WaitForSeconds(subWave.timeToNextSubWave); // Wait for the next subwave
             }
         }
     }
+
 }
