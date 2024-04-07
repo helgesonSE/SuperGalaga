@@ -346,12 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: 1
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2000247572}
   waveIndex: 0
 --- !u!4 &456047145
 Transform:
@@ -795,6 +790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -917,6 +914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -1756,7 +1755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334b05470b12f8a4a87dd75f2a37bbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
   score: 0
+  PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!4 &1493914172
 Transform:
@@ -2073,6 +2074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -2216,6 +2219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -2307,6 +2312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps: []
+  powerUpSpawnPoints: []
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -2460,6 +2467,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a28cda444c5aac4d84808f3b8d167a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 11400000, guid: d00953b8efadbda4a8f0593ade73b56e, type: 2}
+  - {fileID: 11400000, guid: 7c7e892a0dd5ecd4d9a104a384edd257, type: 2}
+  powerUpSpawnPoints:
+  - {fileID: 1794742921}
+  - {fileID: 279633409}
   subWaves:
   - enemies:
     - {fileID: -2094539625167586773, guid: 960f33d14a39c8746b520c1b5e8c09d6, type: 3}
@@ -2475,7 +2488,7 @@ MonoBehaviour:
     - 1
     movementRadius:
     - 1
-    spawnPoint: {fileID: 0}
+    spawnPoint: {fileID: 2126228595}
     enemyVerticalSpacing: 1
     enemyHorizontalSpacing: 0
     timeToNextSubWave: 1
@@ -2494,7 +2507,7 @@ MonoBehaviour:
     - 1
     movementRadius:
     - 1
-    spawnPoint: {fileID: 0}
+    spawnPoint: {fileID: 2126228595}
     enemyVerticalSpacing: 1
     enemyHorizontalSpacing: 0
     timeToNextSubWave: 0

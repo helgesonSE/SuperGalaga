@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUpEffect : MonoBehaviour
 {
     public PowerUp powerup;
-    [HideInInspector] public float speed = 1f;
+    public float speed = 1f;
     [HideInInspector] private float initialY;
 
 
