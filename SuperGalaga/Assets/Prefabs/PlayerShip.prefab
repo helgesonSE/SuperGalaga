@@ -16,8 +16,7 @@ GameObject:
   - component: {fileID: 3613009306064675897}
   - component: {fileID: 3267618809406162400}
   - component: {fileID: 3594646419794300534}
-  - component: {fileID: 8668970466585019228}
-  - component: {fileID: 1023623512084997341}
+  - component: {fileID: -3104348278761223287}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Player
@@ -192,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootSoundClip: {fileID: 8300000, guid: d36cd00ebf3c957478fa28703bd93288, type: 3}
+  audioSource: {fileID: 0}
   projectilePrefab: {fileID: 5470540484642702282, guid: 0721f6b058249c64894e6fe0d2dab4d9, type: 3}
 --- !u!114 &3267618809406162400
 MonoBehaviour:
@@ -268,23 +268,7 @@ PolygonCollider2D:
       - {x: -0.0029966682, y: -0.7553927}
       - {x: 0.4008952, y: -0.59080225}
   m_UseDelaunayMesh: 0
---- !u!114 &8668970466585019228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2644310905663313188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 334b05470b12f8a4a87dd75f2a37bbd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
-  PowerUpTime: 15
-  scoreText: {fileID: 0}
---- !u!82 &1023623512084997341
+--- !u!82 &-3104348278761223287
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,9 +278,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d36cd00ebf3c957478fa28703bd93288, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.419
   m_Pitch: 1
   Loop: 0
   Mute: 0

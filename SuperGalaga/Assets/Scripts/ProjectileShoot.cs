@@ -7,16 +7,17 @@ using UnityEngine;
 public class ProjectileShoot : MonoBehaviour
 {
     [SerializeField] private AudioClip shootSoundClip;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     public GameObject projectilePrefab;
     private bool triggerIsDown = false;
     private bool readyToShoot = true;
-    private float bulletDelay = 0.5f; //Insert your desired delay...
+    private float bulletDelay = 0.3f; //Insert your desired delay...
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //shootSoundClip = GetComponent<AudioClip>();
+        audioSource = GetComponent<AudioSource>(); //should this be the player ship?
     }
 
     // Update is called once per frame
