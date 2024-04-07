@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     private PointManager pointManager;
     private WaveSpawner waveSpawner;
 
-    //its fixad
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour
             waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
-            pointManager.UpdateScore(50);
+            pointManager.UpdateScore();
             Destroy(gameObject);
         }
 
