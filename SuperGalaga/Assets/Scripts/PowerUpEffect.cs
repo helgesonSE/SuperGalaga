@@ -26,9 +26,11 @@ public class PowerUpEffect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-        powerup.Apply(other.gameObject);
-
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            powerup.Apply(other.gameObject);
+        }
     }
 
 

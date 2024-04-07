@@ -54,11 +54,23 @@ public class WaveSpawner : MonoBehaviour
             waveIndex++;
         }
     }
+    private void SpawnPowerUps(WaveTemp wave)
+    {
+        for (int i = 0; i < wave.powerUps.Length; i++)
+        {
+            var powerUp = wave.powerUps[i];
+            GameObject spawnPoint = i < wave.powerUpSpawnPoints.Length ? wave.powerUpSpawnPoints[i] : null;
+            Vector3 spawnPosition = spawnPoint.transform.position;
+            Instantiate(powerUp.prefab, spawnPosition, Quaternion.identity);
+        }
+    }
 
     public IEnumerator SpawnWave()
     {
         if (waveIndex < waves.Length)
         {
+            SpawnPowerUps(waves[waveIndex]);
+
             foreach (var subWave in waves[waveIndex].subWaves)
             {
                 MotionType defaultMotionType = subWave.motionTypes.Length > 0 ? subWave.motionTypes[0] : MotionType.Straight;
@@ -92,7 +104,6 @@ public class WaveSpawner : MonoBehaviour
 
                     yield return new WaitForSeconds(subWave.timeToNextEnemy);
                 }
-
                 yield return new WaitForSeconds(subWave.timeToNextSubWave); // Wait for the next subwave
             }
         }
