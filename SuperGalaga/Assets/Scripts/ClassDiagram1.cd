@@ -73,7 +73,7 @@
   <Class Name="MainMenu">
     <Position X="21.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAEAAAAAIAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAIAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -94,7 +94,7 @@
   <Class Name="PlayerLives">
     <Position X="6.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAECAAAAAAAAAAAAAAAEIAAAAAAAAAAIEAAAA=</HashCode>
+      <HashCode>AAQAAAAAECAAAAAAAAgAAAAAAEIAAAAAAAAAAIEAAEE=</HashCode>
       <FileName>Assets\Scripts\PlayerLives.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -115,7 +115,7 @@
   <Class Name="PowerUpEffect">
     <Position X="4.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAACAgAQAAAAAAAAAAAEAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAgASAAAAAAAAAAAEAAEQAAAAACAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerUpEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -152,13 +152,6 @@
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAIA=</HashCode>
       <FileName>Assets\Scripts\SceneSwitcher.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ScoreFloatReference">
-    <Position X="6.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQgAAAAACA=</HashCode>
-      <FileName>Assets\Scripts\ScoreFloatReference.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScorePowerUp">
