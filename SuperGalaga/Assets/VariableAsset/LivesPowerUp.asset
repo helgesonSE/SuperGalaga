@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34688d30f46dbfb45b517d08cb6bc798, type: 3}
   m_Name: LivesPowerUp
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8353585375785945703, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
+  prefab: {fileID: 6402166272273230219, guid: a4aff5a795bbe2b43a44a7c16866be3c, type: 3}
   extraLife: 3

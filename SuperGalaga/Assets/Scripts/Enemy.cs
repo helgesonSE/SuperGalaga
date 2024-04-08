@@ -30,8 +30,13 @@ public class Enemy : MonoBehaviour
         transform.Rotate(0, 0, 90);// Rotate the enemy to face the player
         initialY = transform.position.y;
     }
+    protected virtual void Shoot()
+    {
+        // Create a shot at the enemy's position
+        Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0f, 0f, 90f));
+    }
 
-    void Update()
+    protected virtual void Update()
     {
         void Shoot()
         {

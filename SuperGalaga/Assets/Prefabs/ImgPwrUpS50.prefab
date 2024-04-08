@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerup: {fileID: 11400000, guid: d00953b8efadbda4a8f0593ade73b56e, type: 2}
-  speed: 1
+  speed: 3
 --- !u!58 &7214704163837338893
 CircleCollider2D:
   m_ObjectHideFlags: 0
