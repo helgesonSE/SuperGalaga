@@ -48,4 +48,13 @@ public class PlayerLives : MonoBehaviour
         }
     }
 
+    public void FillUpLives()
+    {
+        lives = 3;
+        livesUI[0].enabled = true;
+        livesUI[1].enabled = true;
+        livesUI[3].enabled = true;
+
+    }
+
 }

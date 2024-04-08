@@ -8,6 +8,8 @@ public class PointManager : MonoBehaviour
     public FloatVariable points;
     public float score;
 
+
+
     public float PowerUpTime = 15f;
 
     public TMP_Text scoreText;
