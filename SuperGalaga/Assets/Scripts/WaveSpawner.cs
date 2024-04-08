@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 public enum MotionType // Global enum so that Enemy.cs and WaveSpawner can access it
 {
@@ -53,6 +54,11 @@ public class WaveSpawner : MonoBehaviour
             readyToCountDown = true;
             waveIndex++;
         }
+
+        if (waveIndex >= waves.Length)
+        {
+            SceneSwitcher.EndGame(true);
+        }
     }
     public IEnumerator SpawnWave()
     {
@@ -88,10 +94,6 @@ public class WaveSpawner : MonoBehaviour
                     Enemy enemy = Instantiate(subWave.enemies[j], spawnPosition, Quaternion.identity); // Spawn the enemy
 
                     enemy.transform.parent = transform; // Set the parent of the enemy to the WaveSpawner
-
-                    Rigidbody2D rb = enemy.gameObject.AddComponent<Rigidbody2D>(); // Add a Rigidbody2D component to the enemy
-
-                    rb.gravityScale = 0; // Set the gravity scale to 0
 
                     // Set the motion type of the enemy
                     enemy.motionType = subWave.motionTypes.Length > j ? subWave.motionTypes[j] : defaultMotionType;
