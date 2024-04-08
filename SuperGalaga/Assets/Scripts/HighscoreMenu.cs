@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,22 +13,19 @@ public class HighscoreMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < highscoreList.Count; i++)
+        if (MainMenu.Highscores.Count > 0)
         {
-            GameObject rowObject = Instantiate(ScoreRowPrefab, transform);            // Instantiate a new ScoreRow prefab
+            for (int i = 0; i < Math.Min(MainMenu.Highscores.Count, 6); i++)
+            {
+                GameObject rowObject = Instantiate(ScoreRowPrefab, transform); // Instantiate a new ScoreRow prefab
 
-            TextMeshProUGUI textMeshPro = rowObject.GetComponentInChildren<TextMeshProUGUI>();// Get the TextMeshPro component from the instantiated prefab
+                TextMeshProUGUI textMeshPro = rowObject.GetComponentInChildren<TextMeshProUGUI>(); // Get the TextMeshPro component from the instantiated prefab
 
-            textMeshPro.text = highscoreList[i];            // Set the text of the TextMeshPro component to the corresponding string from the high score list
+                textMeshPro.text = MainMenu.Highscores[i].Name + " - " + MainMenu.Highscores[i].Score.ToString(); // Set the text of the TextMeshPro component to the corresponding string from the high score list
 
-            float yOffset = i * verticalOffset;            // Position the instantiated row vertically with the desired offset
-            rowObject.transform.localPosition += new Vector3(0f, -yOffset, 0f);
+                float yOffset = i * verticalOffset; // Position the instantiated row vertically with the desired offset
+                rowObject.transform.localPosition += new Vector3(0f, -yOffset, 0f);
+            }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
