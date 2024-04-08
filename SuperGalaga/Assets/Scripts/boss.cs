@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Boss : Enemy
 {
@@ -7,6 +8,7 @@ public class Boss : Enemy
     public GameObject specialProjectilePrefab; // The special projectile that the boss shoots
     private Coroutine specialShootCoroutine;
     public Enemy[] enemiesToSpawn; // Enemies that the boss can spawn
+    public List<Enemy> spawnedEnemies = new List<Enemy>();
     public Vector2[] spawnPositions = new Vector2[]
 {
     new Vector2(5.26f, -3.94f),
@@ -27,6 +29,7 @@ public class Boss : Enemy
         hp -= damage;
         if (hp <= 0)
         {
+            SceneSwitcher.EndGame(true);
             Destroy(gameObject);
         }
     }
@@ -81,8 +84,9 @@ public class Boss : Enemy
             {
                 int randomIndex = Random.Range(0, spawnPositions.Length); // Get a random index
                 Vector2 spawnPosition = spawnPositions[randomIndex]; // Use the random index to select a spawn position
-                Enemy spawnedEnemy = Instantiate(enemy, new Vector3(spawnPosition.x, spawnPosition.y, -4), Quaternion.identity); // Set the Z position to -4
-                Rigidbody2D rb = enemy.gameObject.AddComponent<Rigidbody2D>(); // Add a Rigidbody2D component to the enemy
+                Enemy spawnedEnemy = Instantiate(enemy, new Vector3(spawnPosition.x, spawnPosition.y, -4), Quaternion.identity);
+                spawnedEnemies.Add(spawnedEnemy);
+                //Rigidbody2D rb = enemy.gameObject.AddComponent<Rigidbody2D>(); // Add a Rigidbody2D component to the enemy
                 spawnedEnemy.motionType = MotionType.Straight; // Set the motion type to Straight
                 spawnedEnemy.speed = 2f; // Set the speed of the enemy
                 yield return new WaitForSeconds(3); // Wait for 3 seconds

@@ -31,7 +31,10 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            if (waveSpawner.waveIndex < waveSpawner.waves.Length)
+            {
+                waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            }
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             pointManager.UpdateScore();
