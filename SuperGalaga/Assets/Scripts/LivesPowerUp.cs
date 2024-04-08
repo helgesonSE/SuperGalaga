@@ -7,17 +7,17 @@ using UnityEngine;
 public class LivesPowerUp : PowerUp
 {
     public int extraLife;
-    public override void Apply(GameObject other)
+    public override void Apply(GameObject player)
     {
-        PlayerLives playerLives = other.GetComponent<PlayerLives>();
-        if (playerLives != null)
+        PlayerLives playerLives = player.GetComponent<PlayerLives>();
+        if (playerLives != null && player.CompareTag("Player")) 
         {
-            playerLives.FillUpLives();
+            playerLives.FillUpLives(extraLife);
 
         }
         else
         {
-            Debug.LogWarning("PlayerLives component not found on the GameObject: " + other.name);
+            Debug.LogWarning("PlayerLives component not found on the GameObject: " + player.name);
         }
     }
 

@@ -10,6 +10,7 @@ public class PlayerLives : MonoBehaviour
     public Image[] livesUI;
     public GameObject explosionPrefab;
     public float moveSpeed;
+    public int MaxLive = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -47,14 +48,21 @@ public class PlayerLives : MonoBehaviour
             }
         }
     }
-
-    public void FillUpLives()
+    public void UpdateLivesUI()
     {
-        lives = 3;
-        livesUI[0].enabled = true;
-        livesUI[1].enabled = true;
-        livesUI[3].enabled = true;
+        for (int i = 0; i < livesUI.Length; i++)
+        {
+            livesUI[i].enabled = i < lives;
 
+        }
     }
+
+    public void FillUpLives(int ExtraLives)
+    {
+        lives += ExtraLives;
+        lives = Mathf.Clamp(lives, 0, MaxLive);
+        UpdateLivesUI();
+    }
+
 
 }
