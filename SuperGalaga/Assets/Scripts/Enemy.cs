@@ -97,6 +97,11 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            Boss boss = GetComponentInParent<Boss>();
+            if (boss != null)
+            {
+                boss.spawnedEnemies.Remove(this);
+            }
         }
     }
 }

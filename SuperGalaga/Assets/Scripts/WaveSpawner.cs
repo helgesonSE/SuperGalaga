@@ -12,6 +12,7 @@ public enum MotionType // Global enum so that Enemy.cs and WaveSpawner can acces
 
 public class WaveSpawner : MonoBehaviour
 {
+    public Boss boss;
     [SerializeField] private float countdown; // Time between waves
 
     public WaveTemp[] waves;
@@ -57,7 +58,10 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveIndex >= waves.Length)
         {
-            SceneSwitcher.EndGame(true);
+            if (boss == null || (boss.hp <= 0 && boss.spawnedEnemies.Count == 0))
+            {
+                SceneSwitcher.EndGame(true);
+            }
         }
     }
     public IEnumerator SpawnWave()
