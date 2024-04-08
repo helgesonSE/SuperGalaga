@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5428835809000543772, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1221,7 +1225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!4 &1493914172
@@ -1385,6 +1388,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[0].enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[0].enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[0].enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[0].enemies.Array.data[7]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 3445192183320313119, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[7]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
     - target: {fileID: 6034001108252752946, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
       propertyPath: waves.Array.data[0]
       value: 
@@ -1453,6 +1488,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7349451308764765831, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
+    - target: {fileID: 7349451308764765831, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1807,7 +1850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!1660057539 &9223372036854775807

@@ -578,6 +578,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7349451308764765831, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].spawnPoint
+      value: 
+      objectReference: {fileID: 1186843185}
+    - target: {fileID: 7349451308764765831, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: subWaves.Array.data[1].motionTypes.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1102,7 +1110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!4 &1493914172
@@ -1389,7 +1396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!1 &1925153594 stripped
