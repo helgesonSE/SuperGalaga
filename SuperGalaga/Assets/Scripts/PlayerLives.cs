@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerLives : MonoBehaviour
@@ -43,8 +44,8 @@ public class PlayerLives : MonoBehaviour
 
             if (lives <= 0)
             {
+                SceneSwitcher.PlayerDeath();
                 Destroy(gameObject);
-
             }
         }
     }

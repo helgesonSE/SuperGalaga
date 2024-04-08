@@ -7,12 +7,19 @@ public class PowerUpLivesEffect : MonoBehaviour
     public PowerUp powerup;
     public float speed = 5f;
     [HideInInspector] private float initialY;
+    private AudioSource audioSource;
+    private CircleCollider2D circleCollider2D;
+    private SpriteRenderer spriteRenderer;
+
 
 
     void Start()
     {
         transform.Rotate(0, 0, 90);
         initialY = transform.position.y;
+        audioSource = GetComponent<AudioSource>();
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -28,7 +35,9 @@ public class PowerUpLivesEffect : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            audioSource.Play();
+            circleCollider2D.enabled = false;
+            spriteRenderer.enabled = false;
             powerup.Apply(other.gameObject);
         }
     }
