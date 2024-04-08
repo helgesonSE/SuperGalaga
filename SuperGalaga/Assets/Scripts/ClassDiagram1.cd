@@ -1,203 +1,231 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Boss">
+    <Position X="6.75" Y="8.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAZAAAAAACAABAAAAAgAAAAABEAAAAAAACBAxAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQBAAAAADIgBAQAAARAAAAAAEAAAQAIAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PowerUp">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PowerUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScorePowerUp">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScorePowerUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivesPowerUp">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LivesPowerUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Asteroid">
-    <Position X="8.75" Y="2" Width="1.5" />
+    <Position X="20.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAACAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Asteroid.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BackgroundObject">
-    <Position X="19.25" Y="1.75" Width="1.5" />
+    <Position X="13.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAACAABCQAAAAAAACAAAAAAAAAAAABQAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\BackgroundObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BackgroundSpawner">
-    <Position X="12.25" Y="1.75" Width="1.5" />
+    <Position X="15.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAIAAAAAEAAAAAAAAAEAAAAAAAAABAA=</HashCode>
       <FileName>Assets\Scripts\BackgroundSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EffectAnimation">
-    <Position X="14" Y="3.75" Width="1.5" />
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAgAAAACAAAAAEAAAAAEAEAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\EffectAnimation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Enemy">
-    <Position X="15.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACQBAAAAADIgAAQAAARAAAAAAEAAAQAIAAAAAAAAIAA=</HashCode>
-      <FileName>Assets\Scripts\Enemy.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ExplosionScript">
-    <Position X="14" Y="1.75" Width="1.5" />
+    <Position X="6.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ExplosionScript.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FloatVariable">
-    <Position X="12" Y="4.75" Width="1.5" />
+    <Position X="8.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\FloatVariable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameOverMenu">
-    <Position X="10.5" Y="2" Width="1.5" />
+    <Position X="10" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAgAAAAAAAAAAAAABAAAAAAAAABAAAA=</HashCode>
       <FileName>Assets\Scripts\GameOverMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Highscore">
-    <Position X="2.75" Y="4.5" Width="1.5" />
+    <Position X="8.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Highscore.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HighscoreMenu">
-    <Position X="21" Y="1.75" Width="1.5" />
+    <Position X="11.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAAAAADAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Assets\Scripts\HighscoreMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IntVariable">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\IntVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="MainMenu">
-    <Position X="21.25" Y="4.25" Width="1.5" />
+    <Position X="11.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAEAAAAAIAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MenuBackground">
-    <Position X="17.5" Y="1.75" Width="1.5" />
+    <Position X="13.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\MenuBackground.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerController">
-    <Position X="7" Y="2" Width="1.5" />
+    <Position X="15.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Assets\Scripts\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerLives">
-    <Position X="6.75" Y="4" Width="1.5" />
+    <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAECAAAAAAAAgAAAAAAEIAAAAAAAAAAIEAAEE=</HashCode>
       <FileName>Assets\Scripts\PlayerLives.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PointManager">
-    <Position X="12.25" Y="6" Width="1.5" />
+    <Position X="15.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAACQAiQoAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PointManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PowerUp">
-    <Position X="4.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\PowerUp.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PowerUpEffect">
-    <Position X="4.75" Y="6" Width="1.5" />
+    <Position X="17" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAgASAAAAAAAAAAAEAAEQAAAAACAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerUpEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="PowerUpLivesEffect">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAgASAAAAAAAAAAAEAAEQAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PowerUpLivesEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Projectile">
-    <Position X="17.75" Y="4.25" Width="1.5" />
+    <Position X="18.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACQAAAAAECAAAAAAAAAAAAAAAEAAAAAAAAAABIAAAAA=</HashCode>
       <FileName>Assets\Scripts\Projectile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Projectile12">
-    <Position X="17.75" Y="7" Width="1.5" />
+    <Position X="17" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAEAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Projectile12.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectileShoot">
-    <Position X="2.75" Y="6" Width="1.5" />
+    <Position X="11.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAQAAAAAACAAAAAAAABAEAAAAAAEEAAAABQAAAAAAAg=</HashCode>
       <FileName>Assets\Scripts\ProjectileShoot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectileSpawner">
-    <Position X="8.5" Y="4.5" Width="1.5" />
+    <Position X="20.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ProjectileSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SceneSwitcher">
-    <Position X="10.5" Y="6.75" Width="1.5" />
+    <Position X="18.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAgAAAAAAAAAAAAAgAAAAIA=</HashCode>
       <FileName>Assets\Scripts\SceneSwitcher.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ScorePowerUp">
-    <Position X="2.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\ScorePowerUp.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ShipMovment">
-    <Position X="15.75" Y="6.5" Width="1.5" />
+    <Position X="18.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAECAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ShipMovment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StarScroller">
-    <Position X="19.5" Y="5" Width="1.5" />
+    <Position X="18.75" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAACAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\StarScroller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WaveSpawner">
-    <Position X="10.5" Y="4" Width="1.5" />
+    <Position X="20.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQACAAEACAAABAAAAAAAAAAAAACAAAAAABAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\WaveSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SubWave">
-    <Position X="14" Y="6.5" Width="1.5" />
+    <Position X="10" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAABgAAAAAAAAAAAQAAAAARAJAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAABAAEBgAAAEAAAAAAAQAAACAZAJAAAAAQAAIAA=</HashCode>
       <FileName>Assets\Scripts\WaveTemp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WaveTemp">
-    <Position X="8.5" Y="7" Width="1.5" />
+    <Position X="20.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAEAAAAAAAAAAAAAABAAAAIAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\WaveTemp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="MotionType">
-    <Position X="4.5" Y="4.5" Width="1.5" />
+    <Position X="6.75" Y="12.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\WaveSpawner.cs</FileName>

@@ -31,18 +31,31 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            if (waveSpawner.waveIndex < waveSpawner.waves.Length)
+            {
+                waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            }
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             pointManager.UpdateScore();
             Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            Boss boss = collision.gameObject.GetComponent<Boss>();
+            if (boss != null)
+            {
+                boss.TakeDamage(1); // Reduce the boss's HP by 1
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Create an explosion
+                pointManager.UpdateScore();
+                Destroy(gameObject); // Destroy the projectile
+            }
         }
 
         if (collision.gameObject.tag == "Boundary")
         {
             Destroy(gameObject);
         }
-
     }
 
 }
