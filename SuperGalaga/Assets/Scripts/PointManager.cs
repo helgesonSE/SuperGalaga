@@ -6,7 +6,7 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
     public FloatVariable points;
-    public float score;
+    static public float Score;
 
     public float PowerUpTime = 15f;
 
@@ -17,15 +17,15 @@ public class PointManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + Score;
         points.value = 50f;
     }
 
     public void UpdateScore()
     {
 
-        score += points.value;
-        scoreText.text = "Score: " + score;
+        Score += points.value;
+        scoreText.text = "Score: " + Score;
     }
     public void PowerUp15sec(float amount)
     {
