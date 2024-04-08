@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.AccessControl;
 using UnityEngine;
 
 public class PowerUpEffect : MonoBehaviour
@@ -7,12 +8,18 @@ public class PowerUpEffect : MonoBehaviour
     public PowerUp powerup;
     public float speed = 1f;
     [HideInInspector] private float initialY;
+    private AudioSource audioSource;
+    private CircleCollider2D circleCollider2D;
+    private SpriteRenderer spriteRenderer;
 
 
     void Start()
     {
         transform.Rotate(0, 0, 90);
         initialY = transform.position.y;
+        audioSource = GetComponent<AudioSource>();
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -28,7 +35,9 @@ public class PowerUpEffect : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            audioSource.Play();
+            circleCollider2D.enabled = false;
+            spriteRenderer.enabled = false;
             powerup.Apply(other.gameObject);
         }
     }
