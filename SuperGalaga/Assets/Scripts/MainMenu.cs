@@ -26,11 +26,12 @@ public class MainMenu : MonoBehaviour
             }           
         }
     }
-    // Start is called before the first frame update
-    public void StartGame()
+    public void OpenLevel(int levelId)
     {
-        SceneManager.LoadScene("Level1");
+        string levelName = "Level" + levelId;
+        SceneManager.LoadScene(levelName);
     }
+
     public void QuitGame()
     {
         Debug.Log("QUIT");

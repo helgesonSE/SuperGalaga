@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.AccessControl;
 using UnityEngine;
 
-public class PowerUpEffect : MonoBehaviour
+public class PowerUpLivesEffect : MonoBehaviour
 {
     public PowerUp powerup;
-    public float speed = 1f;
+    public float speed = 5f;
     [HideInInspector] private float initialY;
     private AudioSource audioSource;
     private CircleCollider2D circleCollider2D;
     private SpriteRenderer spriteRenderer;
+
 
 
     void Start()
@@ -41,6 +41,5 @@ public class PowerUpEffect : MonoBehaviour
             powerup.Apply(other.gameObject);
         }
     }
-
 
 }
