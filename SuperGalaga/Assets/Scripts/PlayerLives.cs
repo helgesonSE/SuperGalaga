@@ -44,7 +44,7 @@ public class PlayerLives : MonoBehaviour
 
             if (lives <= 0)
             {
-                SceneSwitcher.PlayerDeath();
+                SceneSwitcher.EndGame(false);
                 Destroy(gameObject);
             }
         }
