@@ -29,6 +29,7 @@ public class Boss : Enemy
         hp -= damage;
         if (hp <= 0)
         {
+            SceneSwitcher.EndGame(true);
             Destroy(gameObject);
         }
     }
