@@ -1,11 +1,12 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class SubWave
 {
+    public PowerUp[] powerUps;
+    public GameObject[] powerUpSpawnPoints;
+    public Asteroid[] asteroids;
+    public GameObject asteroidSpawnPoint;
     public Enemy[] enemies;
     public MotionType[] motionTypes;
     public float[] speeds;
@@ -16,13 +17,12 @@ public class SubWave
     public float enemyHorizontalSpacing = 1.0f;
     public float timeToNextSubWave;
     public float timeToNextEnemy;
+    public GameObject[] spawnPoints;
 
 }
 
 public class WaveTemp : MonoBehaviour
 {
-    public PowerUp[] powerUps;
-    public GameObject[] powerUpSpawnPoints;
     [SerializeField]
     public SubWave[] subWaves;
     [SerializeField]

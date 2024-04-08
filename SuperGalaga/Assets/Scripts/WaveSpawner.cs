@@ -68,11 +68,12 @@ public class WaveSpawner : MonoBehaviour
 
             for (int i = 0; i < wave.subWaves.Length; i++)
             {
-                
-                if (i < wave.powerUps.Length && i < wave.powerUpSpawnPoints.Length)
+                var subWave = wave.subWaves[i];
+
+                for (int j = 0; j < subWave.powerUps.Length && j < subWave.powerUpSpawnPoints.Length; j++)
                 {
-                    var powerUp = wave.powerUps[i];
-                    GameObject spawnPoint = wave.powerUpSpawnPoints[i];
+                    var powerUp = subWave.powerUps[j];
+                    GameObject spawnPoint = subWave.powerUpSpawnPoints[j];
 
                     if (spawnPoint != null && powerUp != null && powerUp.prefab != null)
                     {
@@ -81,7 +82,6 @@ public class WaveSpawner : MonoBehaviour
                     }
                 }
 
-                var subWave = wave.subWaves[i];
                 MotionType defaultMotionType = subWave.motionTypes.Length > 0 ? subWave.motionTypes[0] : MotionType.Straight;
                 float defaultSpeed = subWave.speeds.Length > 0 ? subWave.speeds[0] : 0;
                 float defaultMovementSpeed = subWave.movementSpeed.Length > 0 ? subWave.movementSpeed[0] : 0;
@@ -114,9 +114,22 @@ public class WaveSpawner : MonoBehaviour
                     yield return new WaitForSeconds(subWave.timeToNextEnemy);
                 }
 
+                for (int j = 0; j < subWave.asteroids.Length; j++) // Add this loop
+                {
+                    Vector3 spawnPosition = subWave.asteroidSpawnPoint.transform.position + new Vector3(j * subWave.enemyHorizontalSpacing, j * subWave.enemyVerticalSpacing, -4); // Use the asteroid spawn point
+
+                    Asteroid asteroid = Instantiate(subWave.asteroids[j], spawnPosition, Quaternion.identity); // Spawn the asteroid
+
+                    asteroid.transform.parent = transform; // Set the parent of the asteroid to the WaveSpawner
+
+                    yield return new WaitForSeconds(subWave.timeToNextEnemy);
+                }
+
                 yield return new WaitForSeconds(subWave.timeToNextSubWave); // Wait for the next subwave
             }
         }
     }
+
+
 
 }
