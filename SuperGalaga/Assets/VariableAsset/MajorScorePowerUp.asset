@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f64124a0fe300149884ff4922fcacf3, type: 3}
   m_Name: MajorScorePowerUp
   m_EditorClassIdentifier: 
+  prefab: {fileID: 8353585375785945703, guid: f5cb8135658f70d4cbb2641a39000d79, type: 3}
   amount: 50
