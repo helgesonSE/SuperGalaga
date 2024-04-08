@@ -630,6 +630,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 388844984169852340, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1571898169743578208, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
       propertyPath: m_Name
       value: Boundaries
@@ -672,6 +676,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1980678127524108343, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428835809000543772, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666968170359446201, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -844,6 +856,7 @@ MonoBehaviour:
   - {fileID: 465932885}
   explosionPrefab: {fileID: 8035059041213991879, guid: f061b29f1f1847c44bfe5f6dc42ed6cf, type: 3}
   moveSpeed: 0
+  MaxLive: 3
 --- !u!61 &1373254085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1293,7 +1306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!4 &1493914172
@@ -1456,6 +1468,10 @@ PrefabInstance:
     - target: {fileID: 2384943427808361648, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
       propertyPath: m_Name
       value: WaveSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6034001108252752946, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: waves.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6313239370730466401, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1829,7 +1845,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 11400000, guid: eb90aff49ceeecd4792eae41c151b44e, type: 2}
-  score: 0
   PowerUpTime: 15
   scoreText: {fileID: 734812983}
 --- !u!1660057539 &9223372036854775807

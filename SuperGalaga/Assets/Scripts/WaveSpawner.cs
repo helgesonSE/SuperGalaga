@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 public enum MotionType // Global enum so that Enemy.cs and WaveSpawner can access it
 {
@@ -52,6 +53,11 @@ public class WaveSpawner : MonoBehaviour
         {
             readyToCountDown = true;
             waveIndex++;
+        }
+
+        if (waveIndex >= waves.Length)
+        {
+            SceneSwitcher.EndGame(true);
         }
     }
     public IEnumerator SpawnWave()
