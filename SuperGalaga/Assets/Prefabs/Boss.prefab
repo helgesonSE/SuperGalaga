@@ -149,9 +149,9 @@ MonoBehaviour:
   movementRadius: 0
   motionType: 0
   projectilePrefab: {fileID: 1804451458869432575, guid: 407ce290065e419448534a1b73c660dc, type: 3}
-  fireRate: 2
+  fireRate: 3
   canShoot: 1
-  hp: 5
+  hp: 50
   specialProjectilePrefab: {fileID: 4421219581002771770, guid: 974a4f5c0641cd84bbcf369cab025f30, type: 3}
   enemiesToSpawn:
   - {fileID: -4235103809782654449, guid: 6f136bdf417380f49a3041f8c05f2fd9, type: 3}

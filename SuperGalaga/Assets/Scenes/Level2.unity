@@ -511,6 +511,10 @@ PrefabInstance:
       value: WaveSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 6034001108252752946, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 6071124833996217138, guid: 71d771e4792c3c44791778716d2c5338, type: 3}
+    - target: {fileID: 6034001108252752946, guid: d370979df6a8c9747bb1d04859b2d3e1, type: 3}
       propertyPath: waves.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -684,6 +688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 566629288234370809, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1571898169743578208, guid: 3a1ed88d503c20043b9aec236bd131f3, type: 3}
       propertyPath: m_Name
       value: Boundaries
