@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerLives : MonoBehaviour
 {
+    private WaveSpawner waveSpawner;
     public int lives = 3;
     public Image[] livesUI;
     public GameObject explosionPrefab;
@@ -31,6 +32,24 @@ public class PlayerLives : MonoBehaviour
             transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
             moveSpeed *= -1;
         }
+        if (collision.gameObject.tag == "Boundary" && (collision.gameObject.name == "Niceship(Clone)" || collision.gameObject.name == "Niceship2(Clone)"))
+        {
+            Destroy(collision.gameObject);
+            waveSpawner.waves[waveSpawner.waveIndex].enemiesLeft--;
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            lives -= 1;
+            if (lives >= 0 && lives < livesUI.Length)
+            {
+                livesUI[lives].enabled = false;
+            }
+
+            if (lives <= 0)
+            {
+                SceneSwitcher.EndGame(false);
+                Destroy(gameObject);
+            }
+        }
+
 
         if (collision.gameObject.tag == "Enemy")
         {
